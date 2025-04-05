@@ -1,0 +1,30 @@
+1. Wybieramy dwa główne czynniki ryzyka (najlepiej trzy)
+- kurs walutowy
+- najlepiej surowce, akcje, można wymyśleć, że firma w coś inwestyuje
+- csv, API - yfinance (ograniczamy się datami)
+- miary zmienności: wariancja, odchylenie standardowe, semi-std, iqr, średnia z próbki
+- usuwamy trend, sezonowość
+- różnicowanie (diff(Xt)) - przyrosty z dnia na dzień <- zwykle to starczy do stacjonarności
+- podzielić różnicę w cenie przez cenę z dnia poprzedniego - dostaniemy zwrot 
+- można zrobić zwroty logarytmiczne ln(Xt / Xt-1)
+- wykres cena, wykres zwroty, histogramy
+- annualizujemy odchylenie standardowe i mnożymy przez 100%
+- kwantyle: 0.5, 0.05, 0.95, 0.975 - z prawdopodobieństwem 0.05 zwroty beda mniejsze niz ...
+- wykres dystrybunaty, tabela - interpretacja: 95% obserwacji było poniżej ...
+
+
+2. Portfel
+P = w1X1 + w2X2 + ...
+X1 - kurs dolara
+X2 - cena srebra
+wagi - 0.4 / 0.6, 0.2 / 0.8 - wybrać
+- jak jesteśmy bankiem to inwestujemy w akcje / obligacje i robimy ich portfel
+- jeśli zapiszemy R_p = w1 R1 + w2 R2 - to powtarzamy pierwszy punkt dla R_p
+- macierz korelacji
+- wielowymiarowa dystrybuanta: wykres 3d, wykres rozkładu - scatterplot + density estimator
+
+3. fitdist
+weibull,
+gumbel
+frechet
+ks test - który jest najelpiej dopasowany
